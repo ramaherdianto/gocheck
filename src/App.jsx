@@ -1,3 +1,16 @@
+const listItems = [
+    {
+        id: 1,
+        title: 'Eat',
+        done: false,
+    },
+    {
+        id: 2,
+        title: 'Sleep',
+        done: true,
+    },
+];
+
 function App() {
     return (
         <div className='app'>
@@ -30,13 +43,29 @@ const CheckList = () => {
         <>
             <div className='list'>
                 <ul>
-                    <li>Makan</li>
-                    <li>Tidur</li>
+                    {listItems.map((item) => {
+                        return <List key={item.id} item={item} />;
+                    })}
                 </ul>
             </div>
         </>
     );
 };
+
+const List = ({ item }) => {
+    return (
+        <>
+            <li>
+                <input type='checkbox' />
+                <span style={{ textDecoration: item.done ? 'line-through' : '' }}>
+                    {item.title}
+                </span>
+                <button>❌</button>
+            </li>
+        </>
+    );
+};
+
 const Stats = () => {
     return (
         <>
