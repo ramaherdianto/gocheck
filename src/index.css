@@ -27,7 +27,7 @@ body {
 
 .logo {
     text-align: center;
-    background-color: #6096b4;
+    background-color: #d8c4b6;
     font-family: 'Montserrat';
     font-size: 8rem;
     font-weight: 600;
@@ -37,7 +37,7 @@ body {
 }
 
 .add-form {
-    background-color: #93bfcf;
+    background-color: #d8c4b6;
     padding: 2.8rem 0;
     display: flex;
     align-items: center;
@@ -72,13 +72,12 @@ input {
 .list {
     background-color: #f5efe7;
     color: #213555;
-    padding: 4rem 0;
+    padding: 4rem 1.2em;
 
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: center;
     gap: 3.2rem;
-    align-items: center;
+    align-items: start;
 }
 
 .actions button,
@@ -92,20 +91,26 @@ input {
 
 .list ul {
     list-style: none;
-    width: 80%;
+    width: 50%;
+
     /* overflow: scroll; */
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-content: start;
+    gap: 1.2rem;
 }
 
 .list li {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     gap: 1.2rem;
+    padding: 10px;
+    background: whitesmoke;
 }
 
 input[type='checkbox'] {
@@ -127,5 +132,5 @@ input[type='checkbox'] {
     background-color: #d8c4b6;
     text-align: center;
     font-weight: 700;
-    padding: 3.2rem 0;
+    padding: 2em 1em;
 }
