@@ -89,15 +89,13 @@ function App() {
                         );
                     })}
                 </ul>
-                <div className='stats'>
-                    <span>
-                        📝 You have {onGoingTask} notes and{' '}
-                        {completedTask === 0 ? 'none of them' : `only ${completedTask}`} are checked
-                        off (
-                        {tasks.length > 0 ? Math.floor((completedTask / tasks.length) * 100) : 0}%)
-                        ✅
-                    </span>
-                </div>
+            </div>
+            <div className='stats'>
+                <span>
+                    📝 You have {onGoingTask} notes and{' '}
+                    {completedTask === 0 ? 'none of them' : completedTask} are checked off (
+                    {tasks.length > 0 ? Math.floor((completedTask / tasks.length) * 100) : 0}%) ✅
+                </span>
             </div>
         </div>
     );
