@@ -14,7 +14,7 @@ function App() {
         // alert when input value is null
         if (inputTask.trim() === '') {
             setShowAlert(true);
-            alert('Input field cannot be empty my dear');
+            alert('Input field cannot be empty my dear 😘');
             return;
         } else {
             // Create new task
